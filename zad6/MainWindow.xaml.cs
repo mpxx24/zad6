@@ -34,8 +34,7 @@ namespace zad6 {
 
         private void timer_tick(object sender, EventArgs e) {
         }
-
-        [HandleProcessCorruptedStateExceptions]
+        
         private void OpenGLControl_OnOpenGLDraw(object sender, OpenGLEventArgs args) {
             Gl = new OpenGL();
             Gl = args.OpenGL;
@@ -50,7 +49,6 @@ namespace zad6 {
             Gl.QuadricNormals(ptr, OpenGL.GLU_SMOOTH);
             Gl.QuadricNormals(ptr, OpenGL.GL_TRUE);
             Gl.Sphere(ptr, 1.0f, 100, 100);
-
 
             Gl.Light(LightName.Light0, LightParameter.Ambient, light_ambient);
             Gl.LightModel(LightModelParameter.Ambient, 1.8f);
